@@ -38,5 +38,21 @@ p{
 	
 }
 ::selection{
-	color: #FFFFFF!important;
+	color: #161713!important;
+	background-color: #FFFFFF;
 }
+input{
+	font-family: 'Cutive Mono', Arial, serif; 
+	font-size: 2vh;
+	color: #E6E6E6;
+}
+input:focus ~ label, input:valid ~ label{
+  top:-20px;
+  font-size: 1.2vh;
+}
+label{
+	font-family: 'Open Sans', Arial, serif; 
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
