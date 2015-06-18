@@ -11,14 +11,30 @@ body{
    top:0px;
    height: 100%;
    width: 100%;
-   background-color: #272822;
+   background-color: #171814;
    color: #E6E6E6;
 }
 #footer {
    position:fixed;
    left:0px;
    bottom:0px;
-   height:30px;
+   height:8vh;
    width:100%;
-   background:#fff;
+   padding:1vh;
+   background:#272822;
+}
+.social_icon{
+   height: 6vh;
+}
+svg:hover{
+   fill: white;
+}
+.icon_container{
+   float:right;
+   margin-right:0,5vw;
+}
+.icons_container_wrapper{
+   width: 95%;
+   height: auto;
+   margin:0 auto;
 }

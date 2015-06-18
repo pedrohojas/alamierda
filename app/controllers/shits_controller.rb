@@ -14,6 +14,7 @@ class ShitsController < ApplicationController
 
   # GET /shits/new
   def new
+    puts "holi----"
     @shit = Shit.new
   end
 
@@ -24,8 +25,8 @@ class ShitsController < ApplicationController
   # POST /shits
   # POST /shits.json
   def create
+    raise shit_params.inspect
     @shit = Shit.new(shit_params)
-
     respond_to do |format|
       if @shit.save
         format.html { redirect_to @shit, notice: 'Shit was successfully created.' }

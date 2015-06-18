@@ -32,43 +32,15 @@ input:focus{
 .inner-editor:focus{
   outline:none;
 }
-/* LABEL ======================================= */
-label                {
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
 
-/* active state */
-input:focus ~ label, input:valid ~ label{
-  top:-20px;
-}
 
-@keyframes inputHighlighter {
-    from { background:#5264AE; }
-  to    { width:0; background:transparent; }
-}
-
-/* active state */
-.inner-editor:focus ~ label, .inner-editor:valid ~ label{
-  top:-20px;
-}
-
-@keyframes inputHighlighter {
-    from { background:#5264AE; }
-  to    { width:0; background:transparent; }
-}
 
 .hide{
   display: none;
 }
 
 
-a.btn,.btn {
+.btn,.btn:visited, .btn:active {
   margin-right: 1em; /* remove this while use*/
   margin-bottom: 1em; /* remove this while use*/
   display: inline-block;
@@ -80,12 +52,18 @@ a.btn,.btn {
   font-weight: 300;
   letter-spacing: 1px;
   vertical-align: middle;
-  background-color:#333;
+  border: 1px solid #e2e2e2;
+  background-color: inherit;
   transition: all 0.2s ease;
   box-sizing: border-box;
   text-shadow: 0 1px 0 rgba(0,0,0,0.01);
-    :hover{
-      background-color:#333;
-    }
-  ;
+  font-weight: 800;
+  font-size: 1.4em;
+  margin-top: 4vh;
+  line-height: 2em;
+  color:inherit;
+  padding:10px 20px;
+}
+.btn:hover{
+    background-color:#CBD50D;
 }
