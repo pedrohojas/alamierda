@@ -1,7 +1,7 @@
 %form
   .group
-    = form_for @shit, :url => "shits_path", :method => :post do |f|
-      %span
+    = form_for @shit,:url => 'shits_create_path' do  |f|
+      %span.field
         %h1
           Que se vaya a la mierda
           = f.text_field :author, class: 'author', placeholder: 'tal sacowea', id: "author_text"
@@ -12,9 +12,11 @@
           %span.highlight
           %span.bar
           &#46;
-      = f.submit '¡Se lo merece!', class: "a btn", id: "button_text"
-      = link_to "Ver otras", 'show_shits', class: "a btn"
-      .field.hide
-        = f.text_area :content
-      .field.hide
-        = f.text_field :featured
+        .field.hide
+          = f.text_area :content
+        .field.hide
+          = f.text_field :featured
+      .actions
+        = f.submit name:'¡Se lo merece!', class: "a btn", id: "button_text"
+        = link_to "Ver otras", 'show_shits', class: "a btn"
+      
