@@ -26,12 +26,12 @@ class ShitsController < ApplicationController
   # POST /shits.json
   def create
     puts "!!!=========== PASO POR CREATE ===========!!!"
-    raise shit_params.inspect
     @shit = Shit.new(shit_params)
     respond_to do |format|
       if @shit.save
-        format.html { redirect_to @shit, notice: 'Shit was successfully created.' }
-        format.json { render :show, status: :created, location: @shit }
+        format.html { render :new }
+        # format.html { redirect_to @shit, notice: 'Shit was successfully created.' }
+        # format.json { render :show, status: :created, location: @shit }
       else
         format.html { render :new }
         format.json { render json: @shit.errors, status: :unprocessable_entity }

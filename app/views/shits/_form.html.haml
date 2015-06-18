@@ -1,22 +1,21 @@
-%form
-  .group
-    = form_for @shit,:url => 'shits_create_path' do  |f|
-      %span.field
-        %h1
-          Que se vaya a la mierda
-          = f.text_field :author, class: 'author', placeholder: 'tal sacowea', id: "author_text"
-          %span.highlight
-          %span.bar
-          por
-          = f.text_field :reason, class: 'reason', placeholder: 'tal gueá', id: "reason_text"
-          %span.highlight
-          %span.bar
-          &#46;
-        .field.hide
-          = f.text_area :content
-        .field.hide
-          = f.text_field :featured
-      .actions
-        = f.submit name:'¡Se lo merece!', class: "a btn", id: "button_text"
-        = link_to "Ver otras", 'show_shits', class: "a btn"
-      
+.group
+  =form_for(@shit, :url=>{:action=>'create'} ) do  |f|
+    %span.field
+      %h1
+        Que se vaya a la mierda
+        = f.text_field :author, class: 'author', placeholder: 'tal sacowea', id: "author_text"
+        %span.highlight
+        %span.bar
+        por
+        = f.text_field :reason, class: 'reason', placeholder: 'tal gueá', id: "reason_text"
+        %span.highlight
+        %span.bar
+        &#46;
+      .field.hide
+        = f.text_area :content
+      .field.hide
+        = f.text_field :featured
+    .actions
+      = f.submit '¡Qué se vaya a la mierda!', class: "a btn", id: "button_text"
+      = link_to "Ver otras", 'show_shits', class: "a btn"
+    
