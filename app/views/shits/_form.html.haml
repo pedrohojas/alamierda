@@ -1,0 +1,21 @@
+%form
+  .group
+    = form_for @shit do |f|
+      %span
+        Que se vaya a la mierda
+        = f.text_field :author, class: 'author', placeholder: 'tal sacowea'
+        %span.highlight
+        %span.bar
+        por
+        = f.text_field :reason, class: 'reason', placeholder: 'tal gueá'
+        %span.highlight
+        %span.bar
+        &#46;
+      %br
+      %br
+      = f.submit '¡Se lo merece!', class: "a btn"
+      .field
+        = f.text_area :content
+      .field
+        = f.text_field :featured
+

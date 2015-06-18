@@ -1,3 +1,9 @@
+
+body {
+  font-family: 'Open Sans', Arial, serif; 
+  font-size: 1em;
+  line-height: 1em;
+}
 h1{
 	font-family: 'Open Sans', Arial, serif; 
 	font-weight: 800;
@@ -52,7 +58,32 @@ input:focus ~ label, input:valid ~ label{
 }
 label{
 	font-family: 'Open Sans', Arial, serif; 
+  	font-size: 2vh;
 	font-weight: 300;
 	text-transform: uppercase;
 }
 
+
+
+// p, ol, ul, td {
+//   font-family: verdana, arial, helvetica, sans-serif;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+
+// pre {
+//   background-color: #eee;
+//   padding: 10px;
+//   font-size: 11px;
+// }
+
+// a { 
+//   color: #000;
+//   &:visited {
+//     color: #666;
+//   }
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }

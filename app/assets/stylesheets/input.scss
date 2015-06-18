@@ -1,0 +1,91 @@
+/*form starting stylings ------------------------------- */
+.group{ 
+  position:relative; 
+  margin:6vh 0vh; 
+}
+input.author, input.reason{
+  padding:10px 10px 10px 5px;
+  border:none;
+  border-bottom:2px solid #e2e2e2;
+  background-color: #161713;
+}
+.reason{
+  width: 600px!important;
+  margin-left: 15px;
+}
+
+.author{
+  margin: 0px 15px;
+  width: 200px!important;
+}
+.inner-editor{
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:2px solid #e2e2e2;
+  background-color: #161713;
+}
+input:focus{
+  outline:none;
+}
+.inner-editor:focus{
+  outline:none;
+}
+/* LABEL ======================================= */
+label                {
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label{
+  top:-20px;
+}
+
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+/* active state */
+.inner-editor:focus ~ label, .inner-editor:valid ~ label{
+  top:-20px;
+}
+
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+.hide{
+  display: none;
+}
+
+
+a.btn,.btn {
+  margin-right: 1em; /* remove this while use*/
+  margin-bottom: 1em; /* remove this while use*/
+  display: inline-block;
+  outline: none;
+  *zoom: 1;
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  background-color:#333;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+    :hover{
+      background-color:#333;
+    }
+  ;
+}

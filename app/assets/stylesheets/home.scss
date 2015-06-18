@@ -1,8 +1,9 @@
 .home-input-wrapper{
 	background-color: #171814;
-	height: 50vh;
-	width: 70vw;
-	margin: 25vh auto;
+	width: 90vw;
 	padding: 5vh;
+	overflow: hidden;
+	position:absolute;
+	left:50%; top:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); 
 }
 	

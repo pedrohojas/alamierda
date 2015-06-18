@@ -1,0 +1,27 @@
+%h1 Listing shits
+
+%table
+  %thead
+    %tr
+      %th Content
+      %th Reason
+      %th Author
+      %th Featured
+      %th
+      %th
+      %th
+
+  %tbody
+    - @shits.each do |shit|
+      %tr
+        %td= shit.content
+        %td= shit.reason
+        %td= shit.author
+        %td= shit.featured
+        %td= link_to 'Show', shit
+        %td= link_to 'Edit', edit_shit_path(shit)
+        %td= link_to 'Destroy', shit, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Shit', new_shit_path

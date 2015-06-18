@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @shit.content
+%p
+  %b Reason:
+  = @shit.reason
+%p
+  %b Author:
+  = @shit.author
+%p
+  %b Featured:
+  = @shit.featured
+
+= link_to 'Edit', edit_shit_path(@shit)
+\|
+= link_to 'Back', shits_path
