@@ -11610,13 +11610,4 @@ return jQuery;
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-
-
-
-
-$(document).ready(function(){
-	console.log("pico");
-	var button_texts = ['texto 1','texto 2'];
-	$('#button_text').value = 'HOLA';
 });
