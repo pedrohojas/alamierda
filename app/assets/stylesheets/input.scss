@@ -32,15 +32,10 @@ input:focus{
 .inner-editor:focus{
   outline:none;
 }
-
-
-
 .hide{
   display: none;
 }
-
-
-.btn,.btn:visited, .btn:active {
+.btn {
   margin-right: 1em; /* remove this while use*/
   margin-bottom: 1em; /* remove this while use*/
   display: inline-block;
@@ -54,7 +49,6 @@ input:focus{
   vertical-align: middle;
   border: 1px solid #e2e2e2;
   background-color: inherit;
-  transition: all 0.2s ease;
   box-sizing: border-box;
   text-shadow: 0 1px 0 rgba(0,0,0,0.01);
   font-weight: 800;
@@ -63,7 +57,10 @@ input:focus{
   line-height: 2em;
   color:inherit;
   padding:10px 20px;
-}
-.btn:hover{
+  &:hover{
     background-color:#CBD50D;
+    border: 1px solid #CBD50D;
+
+    transition: all 0.5s ease;
+  }
 }

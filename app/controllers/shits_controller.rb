@@ -14,7 +14,6 @@ class ShitsController < ApplicationController
 
   # GET /shits/new
   def new
-    puts "=========== PASO POR NEW ==========="
     @shit = Shit.new
   end
 
@@ -25,7 +24,6 @@ class ShitsController < ApplicationController
   # POST /shits
   # POST /shits.json
   def create
-    puts "!!!=========== PASO POR CREATE ===========!!!"
     @shit = Shit.new(shit_params)
     respond_to do |format|
       if @shit.save
