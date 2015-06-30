@@ -42,7 +42,7 @@ p{
 }
 ::selection{
 	color: #161713!important;
-	background-color: #FFFFFF;
+	background-color: #CBD50D;
 }
 input{
 	font-family: 'Cutive Mono', Arial, serif; 
@@ -60,8 +60,14 @@ label{
 	text-transform: uppercase;
 }
 
-
-
+.high{
+	background-color: #CBD50D;
+	padding: 0px 4px;
+}
+p.random_show{
+	font-size: 2.5em;
+	line-height: 1em;
+}
 // p, ol, ul, td {
 //   font-family: verdana, arial, helvetica, sans-serif;
 //   font-size: 13px;

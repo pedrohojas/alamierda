@@ -1,3 +1,93 @@
-$(document).ready(function(){
-	console.log("hola");
-})
+load = function() {
+
+	$.ajaxSetup({
+		dataType: 'json'
+	});
+
+	return $.get('/shits/random.json', function(data) {
+		shit = data;
+		return show_shit();
+	});
+};
+
+increment_current_by = function(num) {
+	current = (current + num) % shits.length;
+	if (current < 0) {
+		current = shits.length + current;
+	}
+	return current;
+};
+
+show_shit = function() {
+	$('.translation').find('#quien').html(shit.author).fadeIn('slow');
+	$('.translation').find('#porque').html(shit.reason).stop().fadeIn('slow');
+};
+
+$(document).on("ready page:load", function() {
+	set_load();
+	$('.load').click(load);
+});
+
+set_load = function(){
+	load();
+	$('div#pie_to_be').pietimer({
+	seconds: 10,
+	color: 'rgba(196,207,16,1)'
+	},
+	function() {
+	  set_load();
+	});
+};
+
+(function($) {
+  jQuery.fn.pietimer = function(options, callback) {
+	var settings = {
+	  'seconds': 10,
+	  'color': 'rgba(255, 255, 255, 0.8)',
+	  'height': this.height(),
+	  'width': this.width()
+	};
+	if (options) {
+	  $.extend(settings, options);
+	}
+	this.html('<canvas id="pie_timer" width="' + settings.height + '" height="' + settings.height + '">' + settings.seconds + '</canvas>');
+	var val = 360;
+	interval = setInterval(timer, 40);
+
+	function timer() {
+	  var canvas = document.getElementById('pie_timer');
+	  if (canvas.getContext) {
+		val -= (360 / settings.seconds) / 24;
+		if (val <= 0) {
+		  clearInterval(interval);
+		  canvas.width = canvas.width;
+		  if (typeof callback == 'function') {
+			callback.call();
+		  }
+		} else {
+		  canvas.width = canvas.width;
+		  var ctx = canvas.getContext('2d');
+		  var canvas_size = [canvas.width, canvas.height];
+		  var radius = Math.min(canvas_size[0], canvas_size[1]) / 2;
+		  var center = [canvas_size[0] / 2, canvas_size[1] / 2];
+		  ctx.beginPath();
+		  ctx.moveTo(center[0], center[1]);
+		  var start = (3 * Math.PI) / 2;
+		  ctx.arc(center[0], center[1], radius, start - val * (Math.PI / 180), start, false);
+		  ctx.closePath();
+		  ctx.fillStyle = settings.color;
+		  ctx.fill();
+		}
+	  }
+	}
+	return this;
+  };
+})(jQuery);
+var isMSIE = /*@cc_on!@*/ 0;
+if (isMSIE) {
+  function ticker() {
+	document.getElementById('pie_to_be').innerHTML = parseInt(document.getElementById('pie_to_be').innerHTML) - 1;
+  }
+  setInterval("ticker()", 1000);
+  setTimeout("document.getElementById('caspioform').submit()", myseconds * 1000);
+}

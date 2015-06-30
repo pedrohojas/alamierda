@@ -1,9 +1,21 @@
+html {
+   background: url(http://subtlepatterns.com/patterns/dark_dotted.png) repeat #222;
+}
 body{
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
    padding: 0px;
    margin: 0px;
+}
+div{
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+   box-sizing: border-box;         /* Opera/IE 8+ */
+}
+h2.load{
+   color: #C4CF10;
+   font-size: 3vh;
 }
 #content{
    position: fixed;
@@ -14,6 +26,11 @@ body{
    background-color: #171814;
    color: #E6E6E6;
 }
+.content_wrapper{
+   height: 86vh;
+   width: 96vw;
+   margin: 2vh auto;
+}
 #footer {
    position:fixed;
    left:0px;
@@ -22,22 +39,55 @@ body{
    width:100%;
    padding:1vh;
    background:#272822;
+   padding:10px 50px;
+}
+.footer_content{
+   width:90%;
+   height: 95%;
+   margin: 0 auto
 }
 .social_icon{
-   height: 6vh;
-}
-svg{
-   fill: white;
-   &:hover{
-     color: #E6E6E6; 
-   }
+   height: 8vh;
 }
 .icon_container{
    float:right;
    margin-right:0,5vw;
 }
 .icons_container_wrapper{
-   width: 95%;
+   float:right;
+   width: 40%;
    height: auto;
    margin:0 auto;
+}
+.logo_container_wrapper{
+   float:left;
+   width: 40%;
+   height: auto;
+}
+#logo_alm{
+   height: 8vh;
+}
+.row{
+   width:100%;
+   height: auto;
+}
+.col{
+   height: 100%;
+   width:auto;
+}
+.header_random_show{
+   height: 20%;
+}
+.body_random_show{
+   height: 80%;
+}
+.trending_shits{
+   float:left;
+   width:30%;
+}
+.content_shits{
+   padding: 20px;
+   float:left;
+   width:70%;
+
 }

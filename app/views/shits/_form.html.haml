@@ -3,11 +3,11 @@
     %span.field
       %h1
         Que se vaya a la mierda
-        = f.text_field :author, class: 'author', placeholder: 'tal sacowea', id: "author_text"
+        = f.text_field :author, class: 'author', placeholder: 'tal persona', id: "author_text"
         %span.highlight
         %span.bar
-        por
-        = f.text_field :reason, class: 'reason', placeholder: 'tal gueá', id: "reason_text"
+        porque
+        = f.text_field :reason, class: 'reason', placeholder: 'tal razón', id: "reason_text"
         %span.highlight
         %span.bar
         &#46;
@@ -17,4 +17,4 @@
         = f.text_field :featured
     .actions
       = f.submit '¡Qué se vaya a la mierda!', class: "a btn", id: "button_text"
-      = link_to "Ver otras", 'show_shits', class: "a btn"
+      = link_to "Ver otras", 'root_path', class: "a btn", id:"show"

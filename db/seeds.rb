@@ -1,0 +1,12 @@
+Shit.delete_all
+Shit.create(author: 'El ramo de transmedia', reason: 'es muy fome', featured: true )
+Shit.create(author: 'Pedro', reason: 'siempre faltar a todo.', featured: true )
+Shit.create(author: 'La UDI', reason: 'fachos y ladrones', featured: true )
+Shit.create(author: 'La Sol', reason: 'no saber usar Illustrator', featured: true )
+Shit.create(author: 'Los pájaros y toda su familia', reason: 'sólo saben volar', featured: true )
+Shit.create(author: 'La gente en general', reason: 'valen callampa', featured: true )
+Shit.create(author: 'Los terremotos', reason: 'Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis.', featured: true )
+Shit.create(author: 'El fútbol', reason: 'es el verdadero opio del pueblo', featured: true )
+Shit.create(author: 'La Universidad', reason: 'es demasiado larga!!!!', featured: true )
+Shit.create(author: 'Los españoles', reason: 'flojos y mantenidos', featured: true )
+Shit.create(author: 'El horóscopo', reason: 'hippies vagos de mierda', featured: true )
