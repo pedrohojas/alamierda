@@ -47,25 +47,26 @@ h2.load{
    margin: 0 auto
 }
 .social_icon{
-   height: 8vh;
+   height: 100%;
 }
 .icon_container{
    float:right;
+   height: 100%;
    margin-right:0,5vw;
 }
 .icons_container_wrapper{
    float:right;
    width: 40%;
-   height: auto;
+   height: 100%;
    margin:0 auto;
 }
 .logo_container_wrapper{
    float:left;
    width: 40%;
-   height: auto;
+   height: 100%;
 }
 #logo_alm{
-   height: 8vh;
+   height: 100%;
 }
 .row{
    width:100%;
@@ -74,12 +75,20 @@ h2.load{
 .col{
    height: 100%;
    width:auto;
+   float: left;
+}
+.c10{
+   width: 10%;
+}
+.c90{
+   width: 90%;
 }
 .header_random_show{
    height: 20%;
 }
 .body_random_show{
-   height: 80%;
+   height: 70vh;
+   margin-top: 20vh
 }
 .trending_shits{
    float:left;
@@ -89,5 +98,7 @@ h2.load{
    padding: 20px;
    float:left;
    width:70%;
-
+}
+.verticalLine {
+    border-right: 2px solid #CBD330;
 }

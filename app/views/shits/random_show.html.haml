@@ -1,19 +1,40 @@
 .content_wrapper
-	.row.header_random_show
 	.row.body_random_show
 		.col.trending_shits
+			%ul.verticalLine
+				%li
+					tag 1
+				%li
+					tag 1					
+				%li
+					tag 1
+				%li
+					tag 1
+				%li
+					tag 1
+				%li
+					tag 1
 		.col.content_shits
-			.translation
-				%p.random_show
-					Que se vaya a la mierda
-					%span#quien.high
-					porque
-					%span#porque
-					&#46;
-				%p
-					 
-				%span
-					#pie_to_be
-					%span
-						%h2.load
-							Siguiente 
+			.row.navigation_shits
+				.col#col_icons
+					.icons_container_wrapper
+						.icon_container
+							= image_tag asset_path("icon-01.svg"), class: "social_icon"
+						.icon_container
+							= image_tag asset_path("icon-03.svg"), class: "social_icon"
+						.icon_container
+							= image_tag asset_path("icon-05.svg"), class: "social_icon"
+						.icon_container
+							#pie_to_be			
+			.row.translation
+				.col.c90
+					%p.random_show
+						Que se vaya a la mierda
+						%span#quien.high
+						porque
+						%span#porque
+						&#46;
+				.col.c10
+					%h2.load
+						&gt;
+			
